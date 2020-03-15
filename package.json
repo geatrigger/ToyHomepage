@@ -1,0 +1,23 @@
+{
+  "name": "toyhomepage",
+  "version": "1.0.0",
+  "description": "1. what to use   - nodejs     - expressjs     - pm2   - js     - leaflet     - chartjs   - MongoDB   - css     - bootstrap   - html   - jquery   - react",
+  "main": "index.js",
+  "dependencies": {
+    "expressjs": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geatrigger/ToyHomepage.git"
+  },
+  "author": "gckim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geatrigger/ToyHomepage/issues"
+  },
+  "homepage": "https://github.com/geatrigger/ToyHomepage#readme"
+}
