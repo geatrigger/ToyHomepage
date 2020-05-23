@@ -2,8 +2,9 @@
   "name": "toyhomepage",
   "version": "1.0.0",
   "description": "1. what to use   - nodejs     - expressjs     - pm2   - js     - leaflet     - chartjs   - MongoDB   - css     - bootstrap   - html   - jquery   - react",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
+    "express": "^4.17.1",
     "expressjs": "^1.0.1"
   },
   "devDependencies": {},
