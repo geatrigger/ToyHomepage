@@ -9,11 +9,20 @@ npm install pm2 -g
 pm2 ecosystem
 ```
 
+* common usage
+```
+pm2 start ecosystem.config.js --env=production
+pm2 list
+pm2 kill
+pm2 delete production_page
+pm2 restart production_page
+```
+
 * deploy
 ```
 // git 커밋을 푸쉬먼저 해야함
 // ssh key에 암호걸려있으면 실패함
 pm2 deploy ecosystem.config.js production setup
+pm2 deploy ecosystem.config.js production update
 pm2 deploy ecosystem.config.js production
-
 ```
