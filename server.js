@@ -30,9 +30,9 @@ app.use(session({
   })
 }))
 
-app.get('/', function (req, res) {
-  res.send('Hello World3')
-})
+app.set('view engine', 'ejs')
+
+app.use('/', require('./routes/app'))
 
 http.listen(port, () => {
   console.log('listening at port ', port)
