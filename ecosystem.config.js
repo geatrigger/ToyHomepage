@@ -2,10 +2,11 @@ module.exports = {
   apps : [{
     name: 'ToyHomepage',
     script: 'server.js',
-    max_memory_restart: '100M',
+    exec_mode: 'cluster',
+    // max_memory_restart: '200M',
     autorestart: true,
     watch: true,
-    ignore_watch: ['node_modules', '.git', 'documents', ],
+    ignore_watch: ['node_modules', '.git', 'documents', '*.md'],
     env: {
       name: 'production_page',
       NODE_ENV: 'production'
