@@ -26,3 +26,7 @@ pm2 deploy ecosystem.config.js production setup
 pm2 deploy ecosystem.config.js production update
 pm2 deploy ecosystem.config.js production
 ```
+
+* 주의사항
+  * ecosystem.config.js의 옵션을 바꾸는 경우 pm2자체를 다시 시작해야함
+  
