@@ -108,4 +108,7 @@ dist/
 tmp/
 temp/
 
+# certificates
+certificates/
+
 # End of https://www.gitignore.io/api/node

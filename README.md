@@ -29,3 +29,18 @@ npm install pm2 -g
 * helmet
   * https로 접근한 사용자의 브라우저에게 maxAge동안 https를 사용하라는 헤더를 보내줌
 
+# HTTPS connection(Security)
+* [https](./documents/https.md)
+* usage
+```js
+const privateKey = fs.readFileSync('certificates/key.pem', 'utf8')
+const certificate = fs.readFileSync('certificates/cert.pem', 'utf8')
+const credentials = {key: privateKey, cert: certificate}
+const httpsServer = https.createServer(credentials, app)
+const port = 3000
+
+httpsServer.listen(port, () => {
+  console.log('https listening at port ', port)
+})
+```
+

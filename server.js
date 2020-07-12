@@ -1,10 +1,16 @@
 const express = require('express')
 const app = express()
-const http = require('http').Server(app)
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const MemoryStore = require('memorystore')(session)
 const helmet = require('helmet')
+const fs = require('fs')
+const https = require('https')
+
+const privateKey = fs.readFileSync('certificates/key.pem', 'utf8')
+const certificate = fs.readFileSync('certificates/cert.pem', 'utf8')
+const credentials = {key: privateKey, cert: certificate}
+const httpsServer = https.createServer(credentials, app)
 
 // const config = require('./config.json')[process.env.NODE_ENV || 'dev']
 
@@ -34,6 +40,6 @@ app.set('view engine', 'ejs')
 
 app.use('/', require('./routes/app'))
 
-http.listen(port, () => {
-  console.log('listening at port ', port)
+httpsServer.listen(port, () => {
+  console.log('https listening at port ', port)
 })
